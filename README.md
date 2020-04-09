@@ -7,6 +7,10 @@
 ## Objectives
 
 - explain what automated testing is and its importance
+
+Automated testing is the process of using software tools to execute tests which are
+then compared to predicted or expected results. This allows developers to increase their confidence levels in important pieces of the program and to save time.
+
 - use react-testing-library for testing react components
 - use react-testing-library to test user interactions with fireEvent
 
@@ -29,6 +33,7 @@ As a developer, you will be writing tests for every component. As we've learned,
 - [ ] Push commits: git push origin `<firstName-lastName>`.
 
 **Test Runner**
+
 - [ ] In a new terminal window, run `npm test`
 - [ ] With each saved change in your editor, the test runner will re-run all the tests
 - [ ] **IMPORTANT** If a test fails, use the test runner's error messages to find out why it is failing
