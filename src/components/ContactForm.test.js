@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import ContactForm from './ContactForm';
 
 
@@ -41,6 +41,20 @@ test('inputs are visible', () => {
 
 })
 
+
+test('Allows text input', () => {
+    //ARRANGE
+    const { getByLabelText } = render(<ContactForm />)
+    const firstNameInput = getByLabelText(/First Name/i)
+    const lastNameInput = getByLabelText(/last name/i)
+    const emailInput = getByLabelText(/email/i)
+    const messageInput = getByLabelText(/message/i)
+    //ACT
+    fireEvent.change(firstNameInput, { target: { value: "Phil" } });
+    fireEvent.change(lastNameInput, { target: { value: "Fives" } });
+    fireEvent.change(emailInput, { target: { value: "philfives@gmail.com" } });
+    fireEvent.change(messageInput, { target: { value: "Whatsup big doggs" } })
+})
 
 
 
